@@ -1,0 +1,10 @@
+workflows:
+  cide-demo-workflow:                # workflow ID
+    name: Demo pipeline    # workflow name displayed in Codemagic UI
+    scripts:
+    -   name: CICD started
+        script: echo "Welcome to your CICD set up"
+    publishing:
+        email:
+            recipients:
+            -   "karlos.dev416@gmail.com"
