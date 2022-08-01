@@ -1,6 +1,9 @@
 workflows:
-  cide-demo-workflow:                # workflow ID
-    name: Demo pipeline    # workflow name displayed in Codemagic UI
+  cide-demo-workflow:
+    name: Demo pipeline
+    environments:
+      groups:
+      - admin
     scripts:
     -   name: CICD started
         script: echo "Welcome to your CICD set up"
