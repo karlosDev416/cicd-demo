@@ -7,12 +7,9 @@ workflows:
     -   name: Build demo
         script: xcodebuild build -project "cicd-demo.xcodeproj" -scheme "cicd-demo" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     publishing:
-        email:
-            recipients:
-            -   "karlos.dev416@gmail.com"
       firebase:
         firebase_token: $FIREBASE_TOKEN
         ios:
           app_id: 1:171693901637:ios:3c451d42bb6a43bd09202c
           groups:
-            - iosTesters            
+            - iosTesters
