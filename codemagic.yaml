@@ -9,6 +9,9 @@ workflows:
         script: echo "Welcome to your CICD set up"
     -   name: Build demo
         script: xcodebuild build -project "cicd-demo.xcodeproj" -scheme "cicd-demo" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+    -   name: Build ipa for distribution
+        script: |
+          xcode-project build-ipa -project "cicd-demo.xcodeproj" -scheme "cicd-demo"
     artifacts:
       - build/ios/ipa/*.ipa
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM        
