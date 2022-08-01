@@ -1,7 +1,7 @@
 workflows:
   cide-demo-workflow:
     name: Demo pipeline
-    environments:
+    environment:
       groups:
       - admin
     scripts:
