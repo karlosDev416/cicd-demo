@@ -10,3 +10,9 @@ workflows:
         email:
             recipients:
             -   "karlos.dev416@gmail.com"
+      firebase:
+        firebase_token: $FIREBASE_TOKEN
+        ios:
+          app_id: 1:171693901637:ios:3c451d42bb6a43bd09202c
+          groups:
+            - iosTesters            
