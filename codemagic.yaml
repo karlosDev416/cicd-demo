@@ -27,6 +27,6 @@ workflows:
       firebase:
         firebase_token: $FIREBASE_TOKEN
         ios:
-          app_id: 1:171693901637:ios:3c451d42bb6a43bd09202c
+          app_id: 1:171693901637:ios:32ca25495b86aa7109202c
           groups:
             - iosTesters
