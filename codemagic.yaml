@@ -20,13 +20,13 @@ workflows:
       - /tmp/xcodebuild_logs/*.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM        
     publishing:
-      app_store_connect:
-        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
-        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
-        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
-      # firebase:
-      #   firebase_token: $FIREBASE_TOKEN
-      #   ios:
-      #     app_id: 1:171693901637:ios:3c451d42bb6a43bd09202c
-      #     groups:
-      #       - iosTesters
+      # app_store_connect:
+      #   api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+      #   key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+      #   issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+      firebase:
+        firebase_token: $FIREBASE_TOKEN
+        ios:
+          app_id: 1:171693901637:ios:3c451d42bb6a43bd09202c
+          groups:
+            - iosTesters
