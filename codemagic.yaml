@@ -8,7 +8,7 @@ workflows:
     -   name: Set up keychain to be used for code signing using Codemagic CLI 'keychain' command
         script: keychain initialize
     -   name: Fetch signing files
-        script: app-store-connect fetch-signing-files "com.wizeline.cicd.demo" --type IOS_APP_DEVELOPMENT --create
+        script: app-store-connect fetch-signing-files "com.wizeline.cicd.demo" --type IOS_APP_STORE --create
     -   name: Set up signing certificate
         script: keychain add-certificates
     -   name: Set up code signing settings on Xcode project
@@ -20,13 +20,7 @@ workflows:
       - /tmp/xcodebuild_logs/*.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM        
     publishing:
-      # app_store_connect:
-      #   api_key: $APP_STORE_CONNECT_PRIVATE_KEY
-      #   key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
-      #   issuer_id: $APP_STORE_CONNECT_ISSUER_ID
-      firebase:
-        firebase_token: $FIREBASE_TOKEN
-        ios:
-          app_id: 1:171693901637:ios:32ca25495b86aa7109202c
-          groups:
-            - iosTesters
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
